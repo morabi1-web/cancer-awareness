@@ -149,12 +149,14 @@
   }
   .hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem);
+    font-size: clamp(3rem, 6vw, 4.5rem);
     font-weight: 700; color: var(--white);
     line-height: 1.25; margin-bottom: 20px;
     max-width: 800px; margin-left: auto; margin-right: auto;
     animation: fadeUp 0.5s 0.2s ease both;
   }
+  .hero-inner h1 { font-size: clamp(4.5rem, 8vw, 6rem); }
+  .hero-inner h1.hero-title { font-size: clamp(3rem, 6vw, 4.5rem); }
   .hero h1 em { color: var(--blue-dark); font-style: normal; }
   .hero p {
     font-size: clamp(1rem, 2vw, 1.15rem);
@@ -341,7 +343,7 @@
   .page-hero.has-video p { color: #fff; }
   .page-hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(1.8rem, 4vw, 2.8rem);
+    font-size: clamp(2.4rem, 5vw, 3.8rem);
     font-weight: 700; margin-bottom: 16px; line-height: 1.25;
   }
   .page-hero p {
@@ -740,7 +742,7 @@
   }
   .conclusion-hero h1 {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(2rem, 5vw, 3.2rem); color: var(--text-dark); margin-bottom: 20px;
+    font-size: clamp(2.4rem, 5vw, 3.8rem); color: var(--text-dark); margin-bottom: 20px;
   }
   .pillars-grid {
     display: grid; grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
@@ -775,7 +777,10 @@
     font-size: 0.72rem; font-weight: 800; color: var(--blue);
     letter-spacing: 0.1em; text-transform: uppercase; margin-bottom: 6px;
   }
-  .ref-card p { font-size: 0.92rem; color: var(--text-mid); line-height: 1.65; }
+  .ref-card p {
+    font-size: 0.92rem; color: var(--text-mid); line-height: 1.65;
+    text-indent: -1.2em; padding-left: 1.2em; margin: 0;
+  }
   .ref-placeholder {
     display: inline-block; margin-top: 8px;
     background: var(--sky); color: var(--blue-dark);
@@ -826,6 +831,7 @@
     <a class="nav-logo" onclick="showPage('home')"><span>🌟</span> HappyJourney</a>
     <ul class="nav-links" id="navLinks">
       <li><a onclick="showPage('home')" class="active" id="nav-home">Home</a></li>
+      <li><a onclick="showPage('happiness-check')" id="nav-happiness-check">Happiness Check</a></li>
       <li><a onclick="showPage('relationships')" id="nav-relationships">Relationships</a></li>
       <li><a onclick="showPage('food')" id="nav-food">Food</a></li>
       <li><a onclick="showPage('physical')" id="nav-physical">Physical</a></li>
@@ -835,7 +841,6 @@
       <li><a onclick="showPage('motivation')" id="nav-motivation">Motivation</a></li>
       <li><a onclick="showPage('gratitude')" id="nav-gratitude">Gratitude</a></li>
       <li><a onclick="showPage('goals')" id="nav-goals">Goals</a></li>
-      <li><a onclick="showPage('happiness-check')" id="nav-happiness-check">Happiness Check</a></li>
       <li><a onclick="showPage('conclusion')" id="nav-conclusion">References</a></li>
     </ul>
     <div class="hamburger" onclick="toggleMenu()">
@@ -854,7 +859,7 @@
     </video>
     <div class="hero-inner">
       <div class="hero-badge">Ages 8–19 · Wellness & Happiness Guide</div>
-      <h1>Finding <em>Happiness</em> During the Cancer Journey</h1>
+      <h1 class="hero-title">Finding <em>Happiness</em> During the Cancer Journey</h1>
       <div class="hero-btns">
       
       </div>
@@ -867,7 +872,7 @@
       <div class="section-title">Happiness Is <em>Part of Healing</em></div>
   <p class="section-sub wide">Finding Happiness During the Cancer Journey
                              Happiness is an important part of life, especially for young cancer patients aged 9–18. Cancer does not only affect the body; it also impacts emotional, social, and mental well-being. During treatment, patients may experience stress, fear, or loneliness, which makes finding ways to feel happy and supported even more important.
-                             This website is designed to help young cancer patients, as well as their families, friends, and caregivers, understand how different aspects of life can improve happiness. Research shows that emotional well-being is closely connected to physical health, meaning that feeling positive and supported can help patients cope better with treatment and daily challenges. </p>
+                             This website is designed to help young cancer patients, as well as their families, friends, and caregivers, understand how different aspects of life can improve happiness. Research shows that emotional well-being is closely connected to physical health, meaning that feeling positive and supported can help patients cope better with treatment and daily challenges (National Cancer Institute, 2025). </p>
       <div class="about-grid">
         
       </div>
@@ -937,7 +942,7 @@
     </video>
     <div class="hero-inner">
       <span class="emoji-big"></span>
-      <h1 style="color:var(--mint-mid)">Relationships & Support</h1>
+      <h1 style="color:var(--mint-mid) font-size">Relationships</h1>
     </div>
   </section>
   <section class="section">
@@ -1055,7 +1060,7 @@
     </video>
     <div class="hero-inner">
       <span class="emoji-big"></span>
-      <h1 style="color:#b06800">Food & Comfort</h1>
+      <h1 style="color:#b06800">Food</h1>
     </div>
   </section>
   <section class="section">
@@ -1259,7 +1264,7 @@
         }
         .page-label h1 {
           font-family: 'DM Serif Display', serif;
-          font-size: clamp(2rem, 5vw, 3rem);
+          font-size: clamp(2.4rem, 5vw, 3.8rem);
           color: var(--text); line-height: 1.2;
         }
         .page-label h1 em { color: var(--mint-dk); font-style: italic; }
@@ -2111,7 +2116,7 @@ function addButterfly() {
     </video>
     <div class="hero-inner" style="position:relative; z-index:2;">
       <span class="emoji-big"></span>
-      <h1 style="color:var(--purple)">Relaxation & Stress Relief</h1>
+      <h1 style="color:var(--purple)">Relaxation</h1>
     </div>
   </section>
   <section class="section">
@@ -2256,7 +2261,7 @@ function addButterfly() {
     </video>
     <div class="hero-inner">
       <span class="emoji-big"></span>
-      <h1 style="color:var(--rose)">Creativity & Expression</h1>
+      <h1 style="color:var(--rose)">Creativity</h1>
     </div>
   </section>
   <section class="section">
@@ -2266,7 +2271,7 @@ function addButterfly() {
           <div class="card-icon">🎨</div>
           <h3>Art Helps Express Feelings</h3>
           <div class="card-body">
-            <p>Art can give cancer patients a gentle way to express emotions that may be hard to explain in words. The National Cancer Institute defines art therapy as using the making of art and the response to art to improve physical, mental, and emotional well-being. For patients, that can mean turning heavy feelings into something visible, personal, and easier to process. On a happiness-focused page, this matters because creative expression can bring relief, comfort, and a sense of emotional release.</p>
+            <p>Art can give cancer patients a gentle way to express emotions that may be hard to explain in words. The American Cancer Society's Art Therapy Pocket Guide defines art therapy as using the making of art and the response to art to improve physical, mental, and emotional well-being (American Cancer Society, n.d.). For patients, that can mean turning heavy feelings into something visible, personal, and easier to process. On a happiness-focused page, this matters because creative expression can bring relief, comfort, and a sense of emotional release.</p>
           </div>
         </div>
         <div class="card" style="border-top:4px solid var(--orange);">
@@ -2860,7 +2865,7 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
     </video>
     <div class="hero-inner">
       <span class="emoji-big"></span>
-      <h1 style="color:var(--blue-dark)">Games & Entertainment</h1>
+      <h1 style="color:var(--blue-dark)">Games</h1>
     </div>
   </section>
   <section class="section">
@@ -3045,13 +3050,13 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
 
 <!-- ============================== MOTIVATION ============================== -->
 <div class="page" id="page-motivation">
-  <section class="page-hero" style="background:linear-gradient(135deg,var(--mint),var(--sky))">
+  <section class="page-hero" style="background: url('resources/motivation.jpg'), linear-gradient(135deg,var(--mint),var(--sky)); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <span class="emoji-big"></span>
-    <h1 style="color:var(--green-dark)">Motivation & Survivor Stories</h1>
+    <h1 style="color:var(--green-dark)">Motivation</h1>
   </section>
   <section class="section">
     <div class="section-inner">
-      <p class="section-sub wide">This page shares real stories from people who have gone through cancer and found strength, hope, and purpose along the way. Survivor stories can remind patients that they are not alone, that brighter days are possible, and that healing can include joy, courage, and meaning. The National Cancer Institute and the American Cancer Society both share survivor stories as a way to support, encourage, and inspire others affected by cancer. Every cancer journey is unique, so these videos are here to offer comfort and encouragement, not comparison. Take what gives you hope, and leave what does not fit your own path. This fits with NCI’s guidance that emotions during cancer can be different for everyone and that support should help people find ways to manage stress and feel more in control.</p>
+      <p class="section-sub wide">This page shares real stories from people who have gone through cancer and found strength, hope, and purpose along the way. Survivor stories can remind patients that they are not alone, that brighter days are possible, and that healing can include joy, courage, and meaning. The National Cancer Institute and the American Cancer Society both share survivor stories as a way to support, encourage, and inspire others affected by cancer. Every cancer journey is unique, so these videos are here to offer comfort and encouragement, not comparison. Take what gives you hope, and leave what does not fit your own path. This fits with NCI’s guidance that emotions during cancer can be different for everyone and that support should help people find ways to manage stress and feel more in control (National Cancer Institute, 2023, 2025).</p>
 
       <div class="cards-grid">
         <div class="card expanded" style="border-top:4px solid var(--green);">
@@ -3106,7 +3111,7 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
     </video>
     <div class="hero-inner">
       <span class="emoji-big"></span>
-      <h1 style="color:var(--purple)">Gratitude & Appreciation</h1>
+      <h1 style="color:var(--purple)">Gratitude</h1>
     </div>
   </section>
   <section class="section">
@@ -3130,7 +3135,7 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
           <div class="card-icon">📝</div>
           <h3>Writing Can Support Hope</h3>
           <div class="card-body">
-            <p>Writing things down can be a simple form of emotional care. Research on gratitude interventions has found improvements in mental health and well-being overall, and newer cancer-related studies suggest gratitude journaling may help some patients feel more grateful, more resilient, and more satisfied with life. This makes your journal section more than just a nice design feature. It becomes a gentle tool for building hope, appreciation, and a stronger connection to the positive parts of everyday life.</p>
+            <p>Writing things down can be a simple form of emotional care. Research on gratitude interventions has found improvements in mental health and well-being overall, and newer cancer-related studies suggest gratitude journaling may help some patients feel more grateful, more resilient, and more satisfied with life (Diniz et al., 2023). This makes your journal section more than just a nice design feature. It becomes a gentle tool for building hope, appreciation, and a stronger connection to the positive parts of everyday life.</p>
           </div>
         </div>
       </div>
@@ -3232,9 +3237,9 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
 
 <!-- ============================== GOALS ============================== -->
 <div class="page" id="page-goals">
-  <section class="page-hero bg-mint">
+  <section class="page-hero bg-mint" style="background: url('resources/goals.webp'), linear-gradient(135deg, var(--mint) 0%, var(--sky) 100%); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <span class="emoji-big"></span>
-    <h1 style="color:var(--green-dark)">Goals & Motivation</h1>
+    <h1 style="color:var(--green-dark)">Goals</h1>
   </section>
 
   <section class="section">
@@ -3246,7 +3251,7 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
           <div class="card-icon">🌱</div>
           <h3>Small Goals Bring Hope</h3>
           <div class="card-body">
-            <p>When life feels uncertain, a small goal can give the day direction and meaning. It does not need to be big. A goal can be as simple as taking a short walk, finishing a page in a journal, or doing one comforting activity. In cancer care, coping often involves finding ways to handle emotions and daily challenges step by step. Small goals can help patients feel that they are still moving forward, and that feeling can bring hope and a brighter outlook.</p>
+            <p>When life feels uncertain, a small goal can give the day direction and meaning. It does not need to be big. A goal can be as simple as taking a short walk, finishing a page in a journal, or doing one comforting activity. In cancer care, coping often involves finding ways to handle emotions and daily challenges step by step (National Cancer Institute, 2023). Small goals can help patients feel that they are still moving forward, and that feeling can bring hope and a brighter outlook.</p>
           </div>
         </div>
         <div class="card" style="border-top:4px solid var(--blue);">
@@ -3800,9 +3805,9 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
 
 <!-- ============================== HAPPINESS CHECK ============================== -->
 <div class="page" id="page-happiness-check">
-  <section class="page-hero" style="background:linear-gradient(135deg,#f0ebfb,#fdf0f5,#e8f4fd)">
+  <section class="page-hero" style="background: url('resources/happiness check.webp'), linear-gradient(135deg,#f0ebfb,#fdf0f5,#e8f4fd); background-size: cover; background-position: center; background-repeat: no-repeat;">
     <span class="emoji-big"></span>
-    <h1 style="color:var(--purple)">Hope & Happiness Check-In</h1>
+    <h1 style="color:var(--purple)">Happiness Check</h1>
   </section>
   <section class="section" style="background:linear-gradient(135deg,#f5f0fb,#fdf8ff)">
     <div class="section-inner">
@@ -3811,7 +3816,7 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
           <div class="card-icon">💜</div>
           <h3>Hope & Happiness Check-In</h3>
           <div class="card-body">
-            <p>This page offers gentle happiness check-ins to help you pause, reflect, and better understand how you are feeling. These tests are here to support self-awareness, hope, and emotional well-being. They are not meant to judge or diagnose you. Instead, they can help you notice your mood, recognize your strengths, and reflect on the small things that support happiness, such as connection, purpose, comfort, and positive moments.</p>
+            <p>This page offers gentle happiness check-ins to help you pause, reflect, and better understand how you are feeling. These tests are here to support self-awareness, hope, and emotional well-being (National Cancer Institute, 2024). They are not meant to judge or diagnose you. Instead, they can help you notice your mood, recognize your strengths, and reflect on the small things that support happiness, such as connection, purpose, comfort, and positive moments.</p>
             <p style="margin-top:12px;">Every person’s journey is different, so these tests are here to guide reflection, not comparison. Take them gently, keep what helps, and remember that even small moments of happiness still matter.</p>
           </div>
         </div>
@@ -3864,48 +3869,48 @@ card.setAttribute('data-secs', window.parseSecs(ex.time));
 <div class="page" id="page-conclusion">
   <section class="section" style="background:linear-gradient(135deg,var(--sky),var(--mint))">
     <div class="section-inner">
-      <div class="section-label">Academic References</div>
-      <div class="section-title">References & <em>Sources</em></div>
+      <div class="section-label"></div>
+      <div class="section-title">References  <em></em></div>
       <p class="section-sub">The following sources informed the content of this project. Citations are in APA format.</p>
 
       <div class="ref-card">
-        <div class="ref-num">Reference 1</div>
+        <div class="ref-num"></div>
         <p>American Cancer Society. (n.d.). <em>Art therapy pocket guide</em> [PDF]. American Cancer Society. <a href="https://www.cancer.org/content/dam/cancer-org/cancer-control/en/booklets-flyers/art-therapy-pocket-guide.pdf" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.org/content/dam/cancer-org/cancer-control/en/booklets-flyers/art-therapy-pocket-guide.pdf</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 2</div>
+        <div class="ref-num"></div>
         <p>American Cancer Society. (n.d.). <em>Cancer stories.</em> American Cancer Society. <a href="https://www.cancer.org/about-us/what-we-do/cancer-stories.html" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.org/about-us/what-we-do/cancer-stories.html</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 3</div>
+        <div class="ref-num"></div>
         <p>American Cancer Society. (2025, November 14). <em>Practice mindfulness, meditation, and relaxation.</em> American Cancer Society. <a href="https://www.cancer.org/cancer/supportive-care/integrative-medicine/mind-body-and-body-based-therapies/mindfulness-meditation-relaxation.html" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.org/cancer/supportive-care/integrative-medicine/mind-body-and-body-based-therapies/mindfulness-meditation-relaxation.html</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 4</div>
+        <div class="ref-num"></div>
         <p>Cancer Research UK. (n.d.). <em>Managing and treating cancer fatigue.</em> Cancer Research UK. <a href="https://www.cancerresearchuk.org/about-cancer/coping/physically/fatigue/managing-treating-cancer-fatigue" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancerresearchuk.org/about-cancer/coping/physically/fatigue/managing-treating-cancer-fatigue</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 5</div>
+        <div class="ref-num"></div>
         <p>Diniz, G., Korkes, L., Trist&atilde;o, L. S., Pelegrini, R., Bellodi, P. L., &amp; Bernardo, W. M. (2023). The effects of gratitude interventions: A systematic review and meta-analysis. <em>Einstein (S&atilde;o Paulo), 21,</em> eRW0371. <a href="https://pmc.ncbi.nlm.nih.gov/articles/PMC10393216/" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://pmc.ncbi.nlm.nih.gov/articles/PMC10393216/</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 6</div>
+        <div class="ref-num"></div>
         <p>National Cancer Institute. (2020, February 10). <em>Physical activity and cancer.</em> National Institutes of Health. <a href="https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.gov/about-cancer/causes-prevention/risk/obesity/physical-activity-fact-sheet</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 7</div>
+        <div class="ref-num"></div>
         <p>National Cancer Institute. (2022, June 2). <em>Cancer survivor and caregiver stories: Christine.</em> National Institutes of Health. <a href="https://cancercontrol.cancer.gov/ocs/resources/survivor-caregiver-stories/christine" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://cancercontrol.cancer.gov/ocs/resources/survivor-caregiver-stories/christine</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 8</div>
+        <div class="ref-num"></div>
         <p>National Cancer Institute. (2023, September 6). <em>Support for families: Childhood cancer.</em> National Institutes of Health. <a href="https://www.cancer.gov/about-cancer/coping/caregiver-support/parents" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.gov/about-cancer/coping/caregiver-support/parents</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 9</div>
+        <div class="ref-num"></div>
         <p>National Cancer Institute. (2024, April 11). <em>How to relax your mind and body.</em> National Institutes of Health. <a href="https://www.cancer.gov/about-cancer/coping/feelings/relaxation" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.gov/about-cancer/coping/feelings/relaxation</a></p>
       </div>
       <div class="ref-card">
-        <div class="ref-num">Reference 10</div>
+        <div class="ref-num"></div>
         <p>National Cancer Institute. (2025, April 9). <em>Emotions and cancer.</em> National Institutes of Health. <a href="https://www.cancer.gov/about-cancer/coping/feelings" target="_blank" rel="noopener noreferrer" style="color:var(--blue-dark);word-break:break-all;">https://www.cancer.gov/about-cancer/coping/feelings</a></p>
       </div>
     </div>
